@@ -1,0 +1,11 @@
+{
+  "name": "YCS2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2",
+    "node-osc": "^2.1.0",
+    "socket.io": "^2.0.4"
+  }
+}

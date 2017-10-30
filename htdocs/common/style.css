@@ -1,0 +1,18 @@
+/* 全体で共通のCSSはこのファイルに記述する */
+body {
+  background-color: #DADADA;
+}
+
+.main.container{
+  margin-top: 30px;
+}
+
+.ui.errorbox {
+  background-color: #FBEFF5;
+}
+
+.ui.my-posts-action{
+  margin-top: 10px;
+  border-top: 1px solid gray;
+  padding-top: 5px;
+}
