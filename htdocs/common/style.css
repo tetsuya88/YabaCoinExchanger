@@ -1,10 +1,19 @@
 /* 全体で共通のCSSはこのファイルに記述する */
 body {
-  background-color: #DADADA;
+  background-color: #000000;
 }
 
 .main.container{
   margin-top: 30px;
+}
+
+.ui{
+  margin: 10px;
+  display: block;
+}
+
+.YE{
+  width: calc(100% - 1rem - 10px);
 }
 
 .ui.errorbox {

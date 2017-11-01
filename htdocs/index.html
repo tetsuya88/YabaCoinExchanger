@@ -20,20 +20,27 @@
   <!-- Vue.jsで読み込む -->
     <div id="app">
 
-      <div class="ui main container">
+      <div class="ui main container centered ">
         <!-- 基本的なコンテンツはここに記載する -->
-        <form name="YEform" class="YE_form" v-on:submit.prevent = "makeJSON">
-          <input type="text" name="YE" v-model="YA.YE">
-          <br>
-          <input type="text" name="age" v-model="YA.age">
-          <br>
+        <form name="YEform" class="ui inverted segment YE_form" v-on:submit.prevent = "makeJSON">
+          <div class="ui inverted input YE">
+            <input type="text" placeholder="やばかったこと" name="YE" v-model="YA.YE">
+          </div>
+          <div class="ui inverted input">
+            <input type="text" class="ui inverted input" name="age" v-model="YA.age"　placeholder="年齢">
+          </div>
           <input type="radio" name="male" v-model="YA.gender" value="male">
           <label for="male">男性</label>
           <input type="radio" name="female" v-model="YA.gender" value="female">
           <label for="female">女性</label>
           <input type="radio" name="other" v-model="YA.gender" value="other">
           <label for="other">その他</label>
-          <button type="makeJSON">送信</button>
+          <div class="ui animated button" tabindex="0" type="makeJSON">
+            <div class="visible content">送信</div>
+              <div class="hidden content">
+                <i class="right arrow up icon"></i>
+              </div>
+            </div>
         </form>
       </div>
 
