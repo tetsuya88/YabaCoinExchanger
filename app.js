@@ -13,6 +13,8 @@ app.use(express.static('htdocs'));
 
 var server = http.createServer(app).listen(8080);  // ポート競合の場合は値を変更
 
+console.log("exchangerのサーバ起動");
+
 var io = socketio.listen(server);
 
 io.sockets.on('connection', function(socket) {

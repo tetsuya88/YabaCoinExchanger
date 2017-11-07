@@ -24,6 +24,7 @@ var vm = new Vue({
 		    type : "GET",
 		    dataType : "jsonp",
 		    success : function(data){
+          console.log(data);
           const likedislike = data.likedislike;
           const joysad = data.joysad;
           const angerfear = data.angerfear;
@@ -33,7 +34,7 @@ var vm = new Vue({
             likedislike: likedislike,
             joysad: joysad,
             angerfear: angerfear,
-            scalar: Math.hypot(likedislike,joysad,angerfear),
+            scalar: Math.round(Math.hypot(likedislike,joysad,angerfear)),
             CreatedAt: new Date(),
             age: vm.YA.age,
             gender: vm.YA.gender
