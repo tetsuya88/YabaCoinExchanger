@@ -21,7 +21,7 @@
     <div id="app">
       <div class="main">
         <!-- 基本的なコンテンツはここに記載する -->
-        <h1 class="YabaIcon">Yaba Coin System</h1>
+        <h1 class="YabaIcon"><img src="./img/logo_white.svg" alt="ロゴ"></h1>
         <form class="form" v-on:submit.prevent = "makeJSON">
           <textarea class="YE_field" type="text" cols="11" rows="3" name="YE" v-model="YA.YE"></textarea>
           <div class="buttonArea">
@@ -142,7 +142,7 @@
               </label>
             </div>
           </div>
-          <button type="makeJSON" name="submitButton" class="submitButton" tabindex="0">送信</button>
+          <button type="makeJSON" name="submitButton" class="submitButton" tabindex="0"><div class="submitButtonLabel">送信</div></button>
         </form>
       </div>
 

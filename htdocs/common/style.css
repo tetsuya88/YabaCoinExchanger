@@ -6,28 +6,42 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
+  text-align: center;
+  overflow-y: hidden;
 }
 
 #app{
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 .main{
   position: relative;
-  width: 100%;
-  height: 100%;
-  border-radius: 50px 50px 0 0;
+  top: -10vw;
+  left: -10vw;
+  width: 120vw;
+  height: 120vw;
+  border-radius: 50%;
   background: #9b9b9b;
+}
+
+.YabaIcon{
+  color: #000000;
+  padding-top: 240px;
+  width: auto;
+  text-align: center;
+  margin: 0;
 }
 
 .form{
   display: block;
   margin: auto;
-  margin-top: 100px;
-  width: 80%;
+  margin-top: 40px;
+  width: 970px;
   height: auto;
   color: #ffffff;
+  text-align: center;
 }
 
 .form h2{
@@ -39,10 +53,10 @@ body {
 .YE_field{
   margin: 0;
   padding: 0;
-  border: none;
+  border: 1px solid #fff;
   border-radius: 5px 5px 5px 5px;
   width: 100%;
-  height: 300px;
+  height: 295px;
   transition: all 0.5s;
   color: #ffffff;
   background: transparent;
@@ -58,14 +72,16 @@ body {
 
 .buttonArea{
   display: block;
-  width: 562px;
+  width: 58%;
   margin: 0 auto;
-  margin-top: 60px;
+  margin-top: 50px;
 }
 
 .genderDiv{
   display: inline-block;
-  width:66%;
+  width:73%;
+  height: auto;
+  text-align: left;
 }
 
 .genderButtons{
@@ -77,9 +93,9 @@ input[type=radio]{
 }
 
 .genderButton{
-  width: 140px;
+  width: 149px;
   height: 55px;
-  margin-right: 55px;
+  margin-right: 52px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -104,14 +120,16 @@ input[type=radio]:checked + .genderButton{
 
 .ageDiv{
   display: inline-block;
-  width: 33%;
+  width: 26%;
+  height: 100%;
+  text-align: left;
 }
 
 .age_field{
   display:inline-block;
   border: none;
   border-radius: 5px 5px 5px 5px;
-  width: 140px;
+  width: 149px;
   height: 55px;
   transition: all 0.5s;
   background: #ffffff;
@@ -163,41 +181,32 @@ input[type=radio]:checked + .genderButton{
 }
 
 .submitButton{
-  display: block;
-  position: absolute;
-  bottom:0;
-  left: 25%;
-  border-radius: 5px 5px 5px 5px;
-  width: 36%;
+  position: relative;
+  display: inline-block;
+  margin-top: 70px;
+  width: 356px;
+  height: 356px;
   cursor: pointer;
-  min-height: 1em;
-  outline: 0;
   border: none;
-  vertical-align: baseline;
+  border-radius: 50%;
   background: #e4e4e4;
-  color: #9b9b9b;
-  margin: 0 0 0 4.4%;
-  height: 55px;
-  text-transform: none;
-  text-shadow: none;
+}
+
+.submitButtonLabel{
+  display: block;
+  position: relative;
+  top: -110px;
+  font-size: 48px;
   font-weight: 700;
-  line-height: 1em;
   font-style: normal;
   text-align: center;
   text-decoration: none;
-  transition: .3s;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,.12), 0 2px 2px 0 rgba(0,0,0,.24);
+  color: #9b9b9b;
 }
 
-.submitButton:hover {
-  box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2);
-}
-
-.YabaIcon{
-  color: #000000;
-  width: 100%;
-  text-align: center;
-  margin: 0;
+.YabaIcon img{
+  width: 150px;
+  height: auto;
 }
 
 .ui.errorbox {
