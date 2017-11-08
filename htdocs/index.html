@@ -14,16 +14,31 @@
   <script src="https://unpkg.com/vue@2.3.3/dist/vue.js"></script>
   <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="/socket.io/socket.io.js"></script>
-
 </head>
 <body>
   <!-- Vue.jsで読み込む -->
     <div id="app">
+      <div class="top">
+        <h1><img src="./img/logo_gray.svg" alt="ロゴ"></h1>
+        <p>「ヤバい」という言葉は、広く感動詞的に用いられることから、<br>
+            感情の大きさを表す単位として考えることができる。<br>
+            <br>
+            したがって様々な感情をベクトルで表すならば、<br>
+            「ヤバさ」はスカラーとして考えることができる。<br>
+            <br>
+            このヤバコインシステム(通称YCSでは)、<br>
+            出来事のヤバさを「ヤバコイン」に変換し、<br>
+            それと同値の別の出来事に変換できるシステムである。<br>
+        </p>
+        <nav class="startButton ripple">
+          <div class="startButtonLabel">ヤバイできごとを変換する</div>
+        </nav>
+      </div>
       <div class="main">
         <!-- 基本的なコンテンツはここに記載する -->
         <h1 class="YabaIcon"><img src="./img/logo_white.svg" alt="ロゴ"></h1>
         <form class="form" v-on:submit.prevent = "makeJSON">
-          <textarea class="YE_field" type="text" cols="11" rows="3" name="YE" v-model="YA.YE"></textarea>
+          <textarea class="YE_field" type="text" cols="11" rows="3" name="YE"  autocomplete="on" placeholder="ヤバイできごと" v-model="YA.YE"></textarea>
           <div class="buttonArea">
             <div class="genderDiv">
               <h2>性別</h2>
@@ -142,7 +157,7 @@
               </label>
             </div>
           </div>
-          <button type="makeJSON" name="submitButton" class="submitButton" tabindex="0"><div class="submitButtonLabel">送信</div></button>
+          <button type="makeJSON" class="submitButton  ripple" name="submitButton" tabindex="0"><div class="submitButtonLabel">送信</div></button>
         </form>
       </div>
 
@@ -151,5 +166,6 @@
     <script src="./common/config.js"></script>
     <!-- 各ページで使うJavaScriptファイルはこの行より下で読み込む -->
     <script src="./js/exchanger.js"></script>
+    <script src="./js/animation.js"></script>
 </body>
 </html>
