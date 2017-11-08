@@ -21,7 +21,7 @@
 
   //しばらくしたらspanを削除
   setTimeout(function() {
-    var list = document.getElementsByClassName( "rp-effect" ) ;
+    var list = document.getElementsByClassName( "rp-effect" );
     for(var i =list.length-1;i>=0; i--){//末尾から順にすべて削除
     	list[i].parentNode.removeChild(list[i]);
   }}, 2000)};
@@ -33,6 +33,18 @@
 
 var topView = document.getElementsByClassName('top')[0];
 var startButton = document.getElementsByClassName('startButton')[0];
+var mainView = document.getElementsByClassName('main')[0];
+var submitButton = document.getElementsByClassName('submitButton')[0];
+
 startButton.addEventListener("click", function (e) {
+  mainView.classList.remove('closeMain');
+  submitButton.classList.remove('submitButtonDisappear');
   topView.classList.add('closeTop');
+});
+
+submitButton.addEventListener("click",function(e){
+  topView.classList.remove('closeTop');
+  submitButton.classList.add('submitButtonDisappear');
+  mainView.classList.add('closeMain');
+
 });

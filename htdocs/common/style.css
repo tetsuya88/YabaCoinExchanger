@@ -27,13 +27,8 @@ body {
   width: 100%;
   height: 100%;
   color: #9b9b9b;
-  z-index: 100;
+  z-index: 200;
   transition: all 1s;
-}
-
-.closeTop{
-  opacity: 0;
-  height: 0;
 }
 
 .top h1{
@@ -42,6 +37,7 @@ body {
   padding-top: 104px;
   width: 258px;
   text-align: center;
+  transition: all 0.5s;
 }
 
 .top h1 img{
@@ -57,6 +53,7 @@ body {
   font-size: 18px;
   font-weight: 600;
   cursor: default;
+  transition: all 0.5s;
 }
 
 .startButton{
@@ -99,7 +96,8 @@ body {
   height: 120vw;
   border-radius: 50%;
   background: #9b9b9b;
-  z-index: 0;
+  z-index: 100;
+  transition: all 1s;
 }
 
 .YabaIcon{
@@ -232,32 +230,17 @@ input[type=radio]:checked + .genderButton{
   color: #9b9b9b;
 }
 
-.age_field:after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 0;
-  height: 0;
-  top: 50%;
-  right: .6em;
-  margin-top: -.2em;
-  border-width: .45em .3em;
-  border-style: solid;
-  border-color: #9b9b9b transparent transparent;
-  z-index: -1;
-}
-
 .age_field select {
   outline:none;
-  text-indent: 0.01px;
-  text-overflow: '';
+  text-indent: 62px;
   background: none transparent;
   vertical-align: middle;
-  font-size: inherit;
+  font-size: 20px;
+  font-weight: 600;
   color: inherit;
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   width:100%;
   height: 100%;
 }
@@ -310,11 +293,45 @@ input[type=radio]:checked + .genderButton{
   text-decoration: none;
 }
 
+
+
 /*////////////////////////////////*/
 /*////////////////////////////////*/
 /*////////アニメーション関係/////////*/
 /*////////////////////////////////*/
 /*////////////////////////////////*/
+
+.closeTop{
+  opacity: 0;
+  height: 0;
+  z-index: 0;
+}
+
+.closeTop h1{
+  opacity: 0;
+  transition-delay: 1s;
+}
+
+.closeTop p{
+  opacity: 0;
+  transition-delay: 1s;
+}
+
+.closeTop.startButton{
+  bottom: -10vw;
+  transition: all 0.5s;
+}
+
+.closeMain{
+  animation: closeMainEffect 1.5s ease;
+  animation-fill-mode: forwards;
+  z-index: 0;
+}
+
+.submitButtonDisappear{
+  opacity: 0;
+  z-index: 0;
+}
 
 .ripple {
   position: relative;
@@ -327,7 +344,7 @@ input[type=radio]:checked + .genderButton{
   opacity: 0.35;/*波紋の濃さ*/
   transform: scale(0);
   background: #fff;/*波紋色*/
-  animation: clickRipple 1.5s;
+  animation: clickRipple 2.5s;
   pointer-events: none;
 }
 
@@ -378,5 +395,39 @@ input[type=radio]:checked + .genderButton{
   }
   100%{
     box-shadow: 0 0 0 70px rgba(229,229,229,0);
+  }
+}
+
+@-webkit-keyframes closeMainEffect {
+  0%{
+    top: -10vw;
+  }
+  45%{
+    opacity: 90;
+  }
+  90%{
+    top: -220vw;
+    opacity: 0;
+  }
+  100%{
+    top:-10vw;
+    opacity: 0;
+  }
+}
+
+@keyframes closeMainEffect {
+  0%{
+    top: -10vw;
+  }
+  45%{
+    opacity: 90;
+  }
+  90%{
+    top: -220vw;
+    opacity: 0;
+  }
+  100%{
+    top:-10vw;
+    opacity: 0;
   }
 }
