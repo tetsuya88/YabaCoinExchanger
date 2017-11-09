@@ -44,9 +44,13 @@
               <h2>性別</h2>
               <div class="genderButtons">
                 <input type="radio" id="male" v-model="YA.gender" value="male">
-                <label for="male" class="genderButton">男性</label>
+                <label for="male" class="genderButton male">
+                  <div class="genderIcon"></div>
+                </label>
                 <input type="radio" id="female" v-model="YA.gender" value="female">
-                <label for="female" class="genderButton">女性</label>
+                <label for="female" class="genderButton female">
+                  <div class="genderIcon"></div>
+                </label>
               </div>
             </div>
             <div class="ageDiv">
