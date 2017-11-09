@@ -30,6 +30,7 @@ body {
   background: #fff;
   z-index: 200;
   transition: all 0.5s;
+  transition-delay: 0.5s;
 }
 
 .top h1{
@@ -38,7 +39,8 @@ body {
   padding-top: 104px;
   width: 258px;
   text-align: center;
-  transition: all 0.5s;
+  transition: all 1s;
+  transition-delay: 1.25s;
   -webkit-animation: fadeIn 1s ease 0.25s backwards;
   animation: fadeIn 1s ease 0.25s backwards;
 }
@@ -56,8 +58,8 @@ body {
   font-size: 18px;
   font-weight: 600;
   cursor: default;
-  transition: all 0.5s;
-  transition-delay: 1s;
+  transition: all 1s;
+  transition-delay: 1.5s;
   -webkit-animation: fadeIn 1s ease 0.5s backwards;
   animation: fadeIn 1s ease 0.5s backwards;
 }
@@ -71,6 +73,8 @@ body {
   border-radius: 50%;
   background: #9b9b9b;
   cursor: pointer;
+  transition: all 1.5s;
+  transition-delay: 2s;
   -webkit-animation:
     slideIn 1.5s ease 1s backwards,
     staticEffectRipple s ease infinite;
@@ -155,8 +159,7 @@ body {
 
 .YE_field:focus{
   outline: none;
-  background: #e4e4e4;
-  color: #9b9b9b;
+  color: #fff;
 }
 
 ::-webkit-input-placeholder{
@@ -315,6 +318,18 @@ input[type=radio]:checked + .genderButton{
   z-index: 0;
 }
 
+.closeTop h1{
+  opacity: 0;
+}
+
+.closeTop p{
+  opacity: 0;
+}
+
+.closeTop nav{
+  bottom: -23vw;
+}
+
 .closeMain{
   animation: closeMainEffect 1.5s ease;
   top: 220vw;
@@ -451,6 +466,15 @@ input[type=radio]:checked + .genderButton{
   }
   100%{
     opacity: 100;
+  }
+}
+
+@-webkit-keyframes slideIn {
+  0%{
+    bottom:-23vw;
+  }
+  100%{
+    bottom: -7vw;
   }
 }
 
