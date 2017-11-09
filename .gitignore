@@ -5,3 +5,4 @@ Thumbs.db
 !/TD/YCS_exchanger.toe
 /frontend/node_modules
 /frontend/data
+/frontend/htdocs/common/config.js
