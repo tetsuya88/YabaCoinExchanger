@@ -6,12 +6,13 @@ var fs = require('fs');
 var app = express();
 var rimraf = require('rimraf');
 var jsonfile = require('jsonfile');
+var commonconfig = require('../../commonconfig.js');
 
 var cnt = 0;
 var td_osc = new osc.Client('127.0.0.1', 3000);
-var provider_ip = "192.168.3.93";
+var provider_ip = commonconfig.providerIp;
 var provider_osc = new osc.Client(provider_ip, 4000);
-
+console.log(commonconfig.providerIp);
 app.use(express.static('htdocs'));
 
 var server = http.createServer(app).listen(8080);  // ポート競合の場合は値を変更
